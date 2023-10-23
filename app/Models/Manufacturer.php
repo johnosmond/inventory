@@ -9,4 +9,8 @@ class Manufacturer extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function parts() {
+        return $this->hasMany(PartsMasterList::class);
+    }
 }

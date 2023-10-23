@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('parts_master_list', function (Blueprint $table) {
             
-            $table->increments('id'); // do this because we will be connecting to it in Access with DAO table links
-
-            $table->string('part_number', 50);
+            $table->string('part_number', 50)->primary();
 
             $table->text('description');
 

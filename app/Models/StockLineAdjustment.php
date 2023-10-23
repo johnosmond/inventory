@@ -9,4 +9,8 @@ class StockLineAdjustment extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function stockLine() {
+        $this->belongsTo(StockLine::class);
+    }
 }

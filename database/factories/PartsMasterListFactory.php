@@ -21,9 +21,10 @@ class PartsMasterListFactory extends Factory
 
         return [
             'part_number' => $this->generateRandomPartNumber(),
-            'description' => $this->faker->sentence(),
+            'description' => fake()->sentence(),
             'manufacturer_id' => $manufacturerId,
             'category_id' => $categoryId,
+            'shelf_life_in_days' => fake()->numberBetween(30, 365),
         ];
     }
 
@@ -32,7 +33,7 @@ class PartsMasterListFactory extends Factory
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
         do {
-            $length = $this->faker->numberBetween(6, 12);
+            $length = fake()->numberBetween(6, 12);
             $partNumber = '';
 
             for ($i = 0; $i < $length; $i++) {

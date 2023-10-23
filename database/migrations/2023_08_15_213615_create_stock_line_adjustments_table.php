@@ -21,7 +21,7 @@ return new class extends Migration
             $table->dateTime('date_adjusted');
             $table->smallInteger('qty_adjusted');
 
-            $table->text('adjustment_notes');
+            $table->text('adjustment_notes')->nullable();
 
             $table->timestamps();
 

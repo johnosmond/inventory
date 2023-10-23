@@ -16,8 +16,8 @@ return new class extends Migration
             
             $table->increments('id'); // do this because we will be connecting to it in Access with DAO table links
 
-            $table->unsignedInteger('parts_master_id');
-            $table->foreign('parts_master_id')->references('id')->on('parts_master_list');
+            $table->string('part_number', 50);
+            $table->foreign('part_number')->references('part_number')->on('parts_master_list');
 
             $table->smallInteger('stock_line_num');
 

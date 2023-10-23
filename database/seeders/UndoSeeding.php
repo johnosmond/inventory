@@ -18,6 +18,9 @@ class UndoSeeding extends Seeder
         DB::table('parts_master_list')->truncate();
         DB::table('categories')->truncate();
         DB::table('manufacturers')->truncate();
+        DB::table('stock_lines')->truncate();
+        DB::table('stock_line_adjustments')->truncate();
+        
         DB::table('users')->truncate();
         
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
